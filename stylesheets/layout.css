@@ -1,3 +1,19 @@
+html {
+  scroll-behavior: smooth;
+}
+blockquote {
+  font-style: italic;
+  position: relative;
+}
+blockquote::before {
+  position: absolute;
+  content: "“";
+  width: 3px;
+  height: 100%;
+  background-color: #000;
+  top: 0;
+  left: -20px;
+}
 body {
   background-color: #a9a9a9;
 }
@@ -62,4 +78,17 @@ img {
   margin: 30px auto;
   width: 1024px;
   display: block;
+}
+
+ol {
+  padding-left: 20px;
+  list-style-type: decimal;
+}
+ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+li {
+  margin: 8px 0;
 }
