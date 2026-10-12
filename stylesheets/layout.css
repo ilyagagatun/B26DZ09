@@ -1,34 +1,19 @@
-html {
-  scroll-behavior: smooth;
-}
-blockquote {
-  font-style: italic;
-  position: relative;
-}
-blockquote::before {
-  position: absolute;
-  content: "“";
-  width: 3px;
-  height: 100%;
-  background-color: #000;
-  top: 0;
-  left: -20px;
-}
-body {
-  background-color: #f7f3f3;
-}
+/* общие стили */
 * {
   box-sizing: border-box;
 }
-body {
-  font-family: Arial, Helvetica, sans-serif;
+html {
+  scroll-behavior: smooth;
 }
+body {
+  font-family: "PT Root UI", Arial, Helvetica, sans-serif;
+}
+/* стилия для статьи */
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
 p,
 ul,
 ol,
@@ -40,31 +25,32 @@ hr {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+h4 {
   font-weight: bold;
 }
+p,
+ol,
+ul,
 blockquote {
   font-size: 20px;
   line-height: 28px;
   margin-bottom: 30px;
 }
 h1 {
-  font-size: 36px;
+  font-size: 38px;
   margin: 30px auto;
 }
 h1 + p,
 h1 + p a {
-  color: #000;
-  transition: color 0.3s ease;
+  color: #666;
+  transition: color 0.6s ease;
 }
 h1 + p a:hover {
-  color: #f0bebe;
+  color: blue;
 }
 h2 {
   font-size: 32px;
-  line-height: 34px;
+  line-height: 36px;
   margin: 40px auto;
 }
 h3 {
@@ -78,37 +64,53 @@ h4 {
   margin: 20px auto;
 }
 h5 {
-  font-size: 20px;
-  line-height: 24px;
-  margin: 10px auto;
+  font-style: italic;
+  font-size: 21px;
+  line-height: 28px;
+  margin: 20px auto;
+}
+hr {
+  width: 1024px;
 }
 img {
-  margin: 30px auto;
   width: 1024px;
+  margin: 30px auto;
   display: block;
 }
-
 ol {
-  padding-left: 20px;
+  padding-left: 30px;
   list-style-type: decimal;
 }
 ul {
-  padding-left: 20px;
-  list-style-type: disc;
+  padding-left: 30px;
+  list-style-type: square;
 }
-
 li {
   margin: 8px 0;
 }
+blockquote {
+  font-style: italic;
+  position: relative;
+}
+blockquote::before {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 100%;
+  background-color: #000;
+  top: 0;
+  left: -17px;
+}
 
+/* стили для бокового меню */
 .sidebar {
-  width: 300px;
-  margin-top: 20px;
+  width: 280px;
+  margin-top: 58px;
   position: fixed;
   top: 0;
   left: 0;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
+  opacity: 0.2;
+  transition: opacity 0.6s ease;
 }
 .sidebar:hover {
   opacity: 1;
@@ -121,7 +123,7 @@ li {
   list-style-type: none;
   font-size: 12px;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 .sidebar a {
   color: #000;
@@ -130,19 +132,35 @@ li {
 .sidebar a:hover {
   text-decoration: underline;
 }
+
+/* стили для верхнего меню */
 .menubar {
   width: 80%;
   margin: 10px auto;
   font-size: 14px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 22px;
 }
 .menubar a {
   color: #000;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.6s ease;
 }
 .menubar a:hover {
-  color: #f0bebe;
+  color: #666;
+  text-decoration: underline;
 }
+
+/* стили для about.html */
+/* .about-page::before {
+  content: '';
+  width: 1440px;
+  height: 3120px;
+  background-image: url('../images/1440.png');
+  position: absolute;
+  opacity: 0.2;
+} */
 .about h2,
 .about p,
 .about img {
